@@ -179,6 +179,6 @@ li {
 }
 
 .btn-share {
-    border: 2px solid white;
-    color: white;
+    border: 2px solid white !important;
+    color: white !important;
 }
