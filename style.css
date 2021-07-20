@@ -14,8 +14,8 @@ body {
   margin-bottom: 2em;
   top: 0;
   left: 0;
-  width: 60%;
-  height: 60%;
+  width: 70%;
+  height: 70%;
   align-items: center;
 }
 
@@ -116,6 +116,8 @@ background-color: #DB5461;
   color: white;
 }
 
+
+
 .jumbotron {
 /*  background-color: #D62246;*/
 /*  background-color: #ACD2ED;*/
@@ -143,7 +145,7 @@ button {
 
 #letter {
   white-space: pre-line;
-  
+  text-align: left;
 }
 
 .letter-card {
@@ -160,11 +162,11 @@ button {
 .note {
   font-size: 1.5em;
   font-family: 'Krona One', sans-serif;
-  color: #2B2D42
+  color: #2B2D42;
 }
 
-.btn {
-  margin: 1em;
+.btn-petition {
+  margin: 0em !important;
 }
 
 li {
@@ -172,5 +174,11 @@ li {
 }
 
 .btn-primary {
-    background-color: #2B2D42
+    background-color: #2B2D42;
+    margin: 1em;
+}
+
+.btn-share {
+    border: 2px solid white;
+    color: white;
 }

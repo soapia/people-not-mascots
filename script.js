@@ -95,6 +95,8 @@ $(`#ME`).css('opacity', `${opacityLevel}`)
 $(`#ME`).css('fill', `#33A854`)
 $(`#CO`).css('opacity', `${opacityLevel}`)
 $(`#CO`).css('fill', `#33A854`)
+$(`#WA`).css('opacity', `${opacityLevel}`)
+$(`#WA`).css('fill', `#33A854`)
 
 function abbrState(input, to){
     
@@ -5524,7 +5526,7 @@ $("path, circle").click(function() {
   var state_name = this.id
   var my_state = abbrState(`${state_name}`, 'name')
   
-  if (state_name != "CO" && state_name != "ME" ) {
+  if (state_name != "CO" && state_name != "ME" && state_name != "WA") {
       var state_schools = state_data[my_state]["schools"]
       var bad_ones = Math.ceil(state_data[my_state]["num_schools"] / state_data[my_state]["bad_mascots"])
       $("#ratio").text(`1 in ${bad_ones}`)
@@ -5535,7 +5537,7 @@ $("path, circle").click(function() {
       for (const school in state_schools) {
         var school_info = state_schools[school]
         if ('petition' in school_info) {
-          var card = `<div class="col-md-4 mb-5" ><div class="card h-100"><div class="card-body"><h4 class="card-title">${school_info["schoolname"]}</h4><h6 class="card-subtitle mb-2 text-muted">${school_info["city"]}, ${school_info["state"]}</div><div class="card-footer"><a href="${school_info["petition"]}" target="_" class="btn btn-primary">Sign Petition</a></div></div></div>`
+          var card = `<div class="col-md-4 mb-5" ><div class="card h-100"><div class="card-body"><h4 class="card-title">${school_info["schoolname"]}</h4><h6 class="card-subtitle mb-2 text-muted">${school_info["city"]}, ${school_info["state"]}</div><div class="card-footer"><a href="${school_info["petition"]}" target="_" class="btn btn-primary btn-petition">Sign Petition</a></div></div></div>`
           $(".schools").append(card)
         } else {
           var card = `<div class="col-md-4 mb-5" ><div class="card h-100"><div class="card-body"><h4 class="card-title">${school_info["schoolname"]}</h4><h6 class="card-subtitle mb-2 text-muted">${school_info["city"]}, ${school_info["state"]}</h6></div></div></div>`
