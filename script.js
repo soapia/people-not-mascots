@@ -91,12 +91,12 @@ for (let state in values) {
   $(`#${theID}`).css('opacity', `${opacityLevel}`)
 }
 
-$(`#ME`).css('opacity', `${opacityLevel}`)
-$(`#ME`).css('fill', `#33A854`)
-$(`#CO`).css('opacity', `${opacityLevel}`)
-$(`#CO`).css('fill', `#33A854`)
-$(`#WA`).css('opacity', `${opacityLevel}`)
-$(`#WA`).css('fill', `#33A854`)
+$(`#ME`).css('opacity', `1`)
+$(`#ME`).css('fill', `#BCD979`)
+$(`#CO`).css('opacity', `1`)
+$(`#CO`).css('fill', `#BCD979`)
+$(`#WA`).css('opacity', `1`)
+$(`#WA`).css('fill', `#BCD979`)
 
 function abbrState(input, to){
     
