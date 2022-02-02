@@ -5552,7 +5552,7 @@ $("path, circle").click(function() {
   // console.log(my_state)
 
   })
-$("button").click(function() {
+$(".submit").click(function() {
   event.preventDefault()
   if ($("#name").val() == "" || $("#city").val() == "" || $("#state").val() == "") {
         alert("please input your name and area of residence before clicking submit!")
