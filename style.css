@@ -31,7 +31,7 @@ body {
 }
 
 path:hover, circle:hover {
-  stroke: #DB5A42 !important;
+  stroke: #FF7033 !important;
   stroke-width:2px;
   stroke-linejoin: round;
   fill: #ffffff !important;
@@ -40,7 +40,7 @@ path:hover, circle:hover {
 }
 
 path, circle {
-  fill: #DB5A42;
+  fill: #FF7033;
 }
 
 #path67 {
@@ -74,7 +74,7 @@ h1 {
 
 .navbar {
 /*  background-color: #EF959D !important;*/
-    background-color: #DB5A42 !important;
+    background-color: #FF7033 !important;
     border-bottom: 2px solid black;
 }
 
@@ -95,7 +95,7 @@ button {
 }
 
 .mission {
-    background-color: #BCD979;
+    background-color: #FFB0AD;
     padding: 3rem;
     text-align: center;
     border-bottom: 2px solid black !important;
@@ -113,6 +113,16 @@ button {
     margin: 0em 2em 0em 2em;
 /*    width: 10em !important;*/
 
+}
+
+#mc_embed_signup_scroll {
+  display: block;
+  align-items: center;
+  margin: auto;
+}
+
+.asterisk {
+  color: #FFB0AD;
 }
 
 
@@ -140,7 +150,7 @@ h4 {
   justify-content: center;
   text-align: center;
 /*  background-color: #73e2a7;*/
-background-color: #DB5A42;
+background-color: #FF7033;
   padding-top: 2em;
   padding-bottom: 2em;
   color: white;
@@ -152,7 +162,7 @@ background-color: #DB5A42;
     
   color: white;
 /*  color: black;*/
-  background-color: #DB5A42;
+  background-color: #FF7033;
   margin-bottom: 0px;
   
   border-bottom: 2px solid black;
@@ -256,7 +266,7 @@ button {
 }
 
 .history {
-    background: #8FA6CB;
+    background: #14C1BE;
     padding: 3em;
     border-bottom: 2px solid black;
 }
@@ -270,12 +280,12 @@ button {
 }
 
 .list-group-flush li {
-    background: #8FA6CB !important;
+    background: #14C1BE !important;
     font-family: toppan-bunkyu-midashi-go-std, sans-serif;
 }
 
 .list-group-flush li p {
-    background: #8FA6CB !important;
+    background: #14C1BE !important;
     font-family: toppan-bunkyu-gothic-pr6n, serif;
 }
 

@@ -97,6 +97,8 @@ $(`#CO`).css('opacity', `1`)
 $(`#CO`).css('fill', `#BCD979`)
 $(`#WA`).css('opacity', `1`)
 $(`#WA`).css('fill', `#BCD979`)
+$(`#NV`).css('opacity', `1`)
+$(`#NV`).css('fill', `#BCD979`)
 
 function abbrState(input, to){
     
@@ -5526,7 +5528,7 @@ $("path, circle").click(function() {
   var state_name = this.id
   var my_state = abbrState(`${state_name}`, 'name')
   
-  if (state_name != "CO" && state_name != "ME" && state_name != "WA") {
+  if (state_name != "CO" && state_name != "ME" && state_name != "WA" && state_name != "NV") {
       var state_schools = state_data[my_state]["schools"]
       var bad_ones = Math.ceil(state_data[my_state]["num_schools"] / state_data[my_state]["bad_mascots"])
       $("#ratio").text(`1 in ${bad_ones}`)
