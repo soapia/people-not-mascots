@@ -1,11 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family='Montserrat'+Alternates:ital,wght@0,400;0,700;1,400;1,700&family='Montserrat':ital,wght@0,400;0,800;1,400;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 html {
   scroll-behavior: smooth;
 }
 
 body {
   background-color: #EDF2F4;
-  font-family: toppan-bunkyu-gothic-pr6n, serif;
+  font-family: 'Nunito';
   font-weight: 400;
   font-style: normal;
 }
@@ -62,8 +63,8 @@ path, circle {
 }
 
 h1 {
-    font-family: toppan-bunkyu-midashi-go-std, sans-serif;
-/*    font-weight: 900;*/
+    font-family: 'Montserrat';
+    font-weight: 800 !important;
 /*    font-style: normal;*/
 
   font-size: 6em !important;
@@ -73,8 +74,7 @@ h1 {
 }
 
 .navbar {
-/*  background-color: #EF959D !important;*/
-    background-color: #FF7033 !important;
+    background-color: #0DC3BD !important;
     border-bottom: 2px solid black;
 }
 
@@ -127,19 +127,22 @@ button {
 
 
 h2 {
-    font-family: toppan-bunkyu-midashi-go-std, sans-serif;
+    font-family: 'Montserrat';
+  font-weight: 800 !important;
   font-size: 2em;
 }
 
 h3 {
-    font-family: toppan-bunkyu-midashi-go-std, sans-serif;
+    font-family: 'Montserrat';
   margin-bottom: 2em;
   font-size: 2em;
+  font-weight: 800 !important;
 }
 
 h4 { 
-    font-family: toppan-bunkyu-midashi-go-std, sans-serif;
+    font-family: 'Montserrat';
   margin-bottom: 2em;
+  font-weight: 800 !important;
   
 }
 
@@ -162,7 +165,7 @@ background-color: #FF7033;
     
   color: white;
 /*  color: black;*/
-  background-color: #FF7033;
+   background-color: #FFB0AD;
   margin-bottom: 0px;
   
   border-bottom: 2px solid black;
@@ -177,9 +180,11 @@ background-color: #FF7033;
 
 .jumbo-home {
     height: 40rem;
-    background-image: url(activist_grain.png);
+    background-image: url(jumbobg.png);
     background-repeat: no-repeat;
-    background-position: right bottom;
+    background-position: center center;
+    margin: auto !important;
+    text-align: center;
 }
 
 .contact {
@@ -198,7 +203,7 @@ button {
 }
 
 .card-header {
-    font-family: toppan-bunkyu-midashi-go-std, sans-serif;
+    font-family: 'Montserrat';
 }
 
 
@@ -234,12 +239,13 @@ button {
 }
 
 .card-header {
-    font-family: toppan-bunkyu-midashi-go-std, sans-serif;
+    font-family: 'Montserrat';
+  font-weight: 800 !important;
 }
 
 .note {
   font-size: 1.5em;
-  font-family: toppan-bunkyu-midashi-go-std, sans-serif;
+  font-family: 'Montserrat';
   color: white;
 }
 
@@ -266,7 +272,7 @@ button {
 }
 
 .history {
-    background: #14C1BE;
+    background: #d7fefe !important;
     padding: 3em;
     border-bottom: 2px solid black;
 }
@@ -280,13 +286,13 @@ button {
 }
 
 .list-group-flush li {
-    background: #14C1BE !important;
-    font-family: toppan-bunkyu-midashi-go-std, sans-serif;
+    background: inherit;
+    font-family: 'Montserrat';
 }
 
 .list-group-flush li p {
-    background: #14C1BE !important;
-    font-family: toppan-bunkyu-gothic-pr6n, serif;
+    background: inherit;
+    font-family: 'Nunito';
 }
 
 .list-group-flush a {
