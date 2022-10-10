@@ -1,5 +1,13 @@
+
+
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family='Montserrat'+Alternates:ital,wght@0,400;0,700;1,400;1,700&family='Montserrat':ital,wght@0,400;0,800;1,400;1,800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@font-face {
+  font-family: "Montserrat";
+  src: url('Montserrat-VariableFont_wght.ttf');
+  font-weight: 300 800;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -63,7 +71,7 @@ path, circle {
 }
 
 h1 {
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif !important;
     font-weight: 800 !important;
 /*    font-style: normal;*/
 
@@ -127,20 +135,20 @@ button {
 
 
 h2 {
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif !important;
   font-weight: 800 !important;
   font-size: 2em;
 }
 
 h3 {
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif !important;
   margin-bottom: 2em;
   font-size: 2em;
   font-weight: 800 !important;
 }
 
 h4 { 
-    font-family: 'Montserrat';
+    font-family: 'Montserrat' !important;
   margin-bottom: 2em;
   font-weight: 800 !important;
   
@@ -203,7 +211,7 @@ button {
 }
 
 .card-header {
-    font-family: 'Montserrat';
+    font-family: 'Montserrat' !important;
 }
 
 
@@ -239,13 +247,13 @@ button {
 }
 
 .card-header {
-    font-family: 'Montserrat';
+    font-family: 'Montserrat' !important;
   font-weight: 800 !important;
 }
 
 .note {
   font-size: 1.5em;
-  font-family: 'Montserrat';
+  font-family: 'Montserrat' !important;
   color: white;
 }
 
@@ -287,7 +295,7 @@ button {
 
 .list-group-flush li {
     background: inherit;
-    font-family: 'Montserrat';
+    font-family: 'Montserrat' !important;
 }
 
 .list-group-flush li p {
