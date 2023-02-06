@@ -62,7 +62,7 @@ var values = {
 		"US-NH": 2.674,
 		"US-NJ": 3.233,
 		"US-NM": 1.497,
-		"US-NY": 2.971,
+		"US-NY": 0.000,
 		"US-NC": 0.612,
 		"US-ND": 6.701,
 		"US-OH": 5.515,
@@ -99,6 +99,8 @@ $(`#WA`).css('opacity', `1`)
 $(`#WA`).css('fill', `#BCD979`)
 $(`#NV`).css('opacity', `1`)
 $(`#NV`).css('fill', `#BCD979`)
+$(`#NY`).css('opacity', `1`)
+$(`#NY`).css('fill', `#BCD979`)
 
 function abbrState(input, to){
     
@@ -3224,324 +3226,12 @@ const state_data = {
 	},
 	'New York': {
 		num_schools: 2053,
-		bad_mascots: 61,
+		bad_mascots: 0,
 		schools: [
         {
-          state: "New York",
-          city: "Port Richmond",
-          schoolname: "Port Richmond High School"
-        },
-			  {
-          state: "New York",
-          city: "Avon",
-          schoolname: "Avon High School"
-        },
-        {
-          state: "New York",
-          city: "Bradford",
-          schoolname: "Bradford Central High School"
-        },
-        {
-          state: "New York",
-          city: "Brentwood",
-          schoolname: "Brentwood High School",
-          petition: "http://chng.it/SYn92spYVY"
-        },
-        {
-          state: "New York",
-          city: "Caledonia",
-          schoolname: "Caledonia-Mumford High School"
-        },
-        {
-          state: "New York",
-          city: "Cambridge",
-          schoolname: "Cambridge High School",
-          petition: "http://chng.it/Syv78KTbWw"
-        },
-        {
-          state: "New York",
-          city: "Canandaigua",
-          schoolname: "Canandaigua Academy"
-        },
-        {
-          state: "New York",
-          city: "Brooklyn",
-          schoolname: "Canarsie High School"
-        },
-        {
-          state: "New York",
-          city: "Canaseraga",
-          schoolname: "Canaseraga High School"
-        },
-        {
-          state: "New York",
-          city: "Candor",
-          schoolname: "Candor High School"
-        },
-        {
-          state: "New York",
-          city: "Canisteo",
-          schoolname: "Canister-Greenwood High School"
-        },
-        {
-          state: "New York",
-          city: "Star Lake",
-          schoolname: "Clifton-Fine High School"
-        },
-        {
-          state: "New York",
-          city: "Clinton",
-          schoolname: "Clinton High School"
-        },
-        {
-          state: "New York",
-          city: "Albany",
-          schoolname: "Colonie Central High School"
-        },
-        {
-          state: "New York",
-          city: "Coxsackie",
-          schoolname: "Coxsackie-Athens High School"
-        },
-        {
-          state: "New York",
-          city: "Islip Terrace",
-          schoolname: "East Islip High School",
-          petition: "http://chng.it/JWdsPMrrDD"
-        },
-        {
-          state: "New York",
-          city: "Fonda",
-          schoolname: "Fonda-Fultonville High School"
-        },
-        {
-          state: "New York",
-          city: "Glens Falls",
-          schoolname: "Glens Falls High School"
-        },
-        {
-          state: "New York",
-          city: "Groton",
-          schoolname: "Groton High School"
-        },
-        {
-          state: "New York",
-          city: "Schaghticoke",
-          schoolname: "Hoosic Valley High School"
-        },
-        {
-          state: "New York",
-          city: "Indian Lake",
-          schoolname: "Indian Lake Central High School"
-        },
-        {
-          state: "New York",
-          city: "Buffalo",
-          schoolname: "Iroquois Central School District"
-        },
-        {
-          state: "New York",
-          city: "Elma",
-          schoolname: "Iroquois High School"
-        },
-        {
-          state: "New York",
-          city: "Nunda",
-          schoolname: "Keshequa High School"
-        },
-        {
-          state: "New York",
-          city: "Wappingers Falls",
-          schoolname: "Ketcham High School",
-          petition: "http://chng.it/s7j8pq2N8k"
-        },
-        {
-          state: "New York",
-          city: "Gainesville",
-          schoolname: "Letchworth High School"
-        },
-        {
-          state: "New York",
-          city: "Liberty",
-          schoolname: "Liberty High School"
-        },
-        {
-          state: "New York",
-          city: "Chaumont",
-          schoolname: "Lyme Central High School"
-        },
-        {
-          state: "New York",
-          city: "Mahopac",
-          schoolname: "Mahopac High School",
-          petition: "https://www.change.org/p/retiring-mahopac-s-indian-mascot?utm_content=cl_sharecopy_19505736_en-US%3Av8&recruiter=1038995845&recruited_by_id=6f7e52e0-422e-11ea-b3fb-4982b31cbeeb&utm_source=share_petition&utm_medium=copylink&utm_campaign=psf_combo_share_initial&utm_term=psf_combo_share_abi"
-        },
-        {
-          state: "New York",
-          city: "Manhasset",
-          schoolname: "Manhasset Secondary School",
-          petition: "https://www.change.org/p/manhasset-residents-and-manhasset-youth-manhasset-high-school-should-change-their-mascot?utm_content=cl_sharecopy_22616555_en-US%3A7&recruiter=1038995845&recruited_by_id=6f7e52e0-422e-11ea-b3fb-4982b31cbeeb&utm_source=share_petition&utm_medium=copylink&utm_campaign=psf_combo_share_initial&utm_term=psf_combo_share_initial"
-        },
-        {
-          state: "New York",
-          city: "Massapequa",
-          schoolname: "Massapequa High School",
-          petition: "http://chng.it/7rQ8Bg4DXB"
-        },
-        {
-          state: "New York",
-          city: "Slate Hill",
-          schoolname: "Minisink Valley Central High School"
-        },
-        {
-          state: "New York",
-          city: "Rotterdam",
-          schoolname: "Mohonasen High School"
-        },
-        {
-          state: "New York",
-          city: "Odessa",
-          schoolname: "Odessa-Montour High School"
-        },
-        {
-          state: "New York",
-          city: "Oneida",
-          schoolname: "Oneida High School"
-        },
-        {
-          state: "New York",
-          city: "Oriskany",
-          schoolname: "Oriskany High School"
-        },
-        {
-          state: "New York",
-          city: "Owego",
-          schoolname: "Owego Free Academy High School"
-        },
-        {
-          state: "New York",
-          city: "Peru",
-          schoolname: "Peru High School"
-        },
-        {
-          state: "New York",
-          city: "Ravena",
-          schoolname: "Ravena-Coeymans-Selkirk High School"
-        },
-        {
-          state: "New York",
-          city: "Shortsville",
-          schoolname: "Red Jacket High School"
-        },
-        {
-          state: "New York",
-          city: "Richfield Springs",
-          schoolname: "Richfield Springs Central High School"
-        },
-        {
-          state: "New York",
-          city: "Farmingville",
-          schoolname: "Sachem High School East"
-        },
-        {
-          state: "New York",
-          city: "Lake Ronkonkoma",
-          schoolname: "Sachem High School North",
-          // notes: "(Flaming Arrows)"
-        },
-        {
-          state: "New York",
-          city: "Salamanca",
-          schoolname: "Salamanca Central High School"
-        },
-        {
-          state: "New York",
-          city: "Dannemora",
-          schoolname: "Saranac Central High School"
-        },
-        {
-          state: "New York",
-          city: "Sauquoit",
-          schoolname: "Sauquoit Valley High School"
-        },
-        {
-          state: "New York",
-          city: "Schoharie",
-          schoolname: "Schoharie High School"
-        },
-        {
-          state: "New York",
-          city: "Floral Park",
-          schoolname: "Sewanhaka High School",
-          petition: "http://chng.it/7hm5GWW7Jh"
-        },
-        {
-          state: "New York",
-          city: "Poplar Ridge",
-          schoolname: "Southern Cayuga High School"
-        },
-        {
-          state: "New York",
-          city: "Stamford",
-          schoolname: "Stamford Central High School"
-        },
-        {
-          state: "New York",
-          city: "Munnsville",
-          schoolname: "Stockbridge Valley High School"
-        },
-        {
-          state: "New York",
-          city: "Syosset",
-          schoolname: "Syosset High School",
-          petition: "http://chng.it/rDDv9VzRz9"
-        },
-        {
-          state: "New York",
-          city: "City of Tonawanda",
-          schoolname: "Tonawanda High School"
-        },
-        {
-          state: "New York",
-          city: "Old Forge",
-          schoolname: "Town of Webb High School"
-        },
-        {
-          state: "New York",
-          city: "Waterloo",
-          schoolname: "Waterloo High School"
-        },
-        {
-          state: "New York",
-          city: "Waterville",
-          schoolname: "Waterville Jr/Sr High School",
-          petition: "http://chng.it/4xMD6mJKry"
-        },
-        {
-          state: "New York",
-          city: "Wells",
-          schoolname: "Wells High School"
-        },
-        {
-          state: "New York",
-          city: "Newport",
-          schoolname: "West Canada Valley High School"
-        },
-        {
-          state: "New York",
-          city: "West Seneca",
-          schoolname: "West Seneca West Senior High School"
-        },
-        {
-          state: "New York",
-          city: "Highland Falls",
-          schoolname: "James I. O'Neill High School"
-        },
-        {
-          state: "New York",
-          city: "Jamestown",
-          schoolname: "Jamestown High School",
-          notes: "Red Raiders"
+          state: "",
+          city: "",
+          schoolname: ""
         },
 		]
 	},
@@ -5528,7 +5218,7 @@ $("path, circle").click(function() {
   var state_name = this.id
   var my_state = abbrState(`${state_name}`, 'name')
   
-  if (state_name != "CO" && state_name != "ME" && state_name != "WA" && state_name != "NV") {
+  if (state_name != "CO" && state_name != "ME" && state_name != "WA" && state_name != "NV" && state_name != "NY") {
       var state_schools = state_data[my_state]["schools"]
       var bad_ones = Math.ceil(state_data[my_state]["num_schools"] / state_data[my_state]["bad_mascots"])
       $("#ratio").text(`1 in ${bad_ones}`)
