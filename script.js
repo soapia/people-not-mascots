@@ -24,14 +24,14 @@ $(document).mousemove(function(e) {
   $('#info-box').css('left', e.pageX - ($('#info-box').width()) / 2);
 }).mouseover();
 
-var ios = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-if (ios) {
-  $('a').on('click touchend', function() {
-    var link = $(this).attr('href');
-    window.open(link, '_blank');
-    return false;
-  });
-}
+// var ios = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+// if (ios) {
+//   $('a').on('click touchend', function() {
+//     var link = $(this).attr('href');
+//     window.open(link, '_blank');
+//     return false;
+//   });
+// }
 
 
 var values = {
@@ -5302,13 +5302,14 @@ $(".submit").click(function() {
     var letter = `Dear Senator, \n
 I am ${name}, and I am writing to you today to protect Native cultures and create equal learning environments for Native students. Other states such as Maine, Colorado, Washington, Nevada, and New York have recognized that these mascots are detrimental to the public education system. They understand that the American Psychological Association has proved that these offensive caricatures expose Native children to racist stereotypes causing them to distance themselves from their culture, lower self-esteem, and have since retired them. Native people are fighting for their cultures, and due to the United States' previous attacks on Native peoples and cultures, it is now our collective responsibility to right these wrongs. 
 \n
-To do so, I am asking you to use your position as a United States Senator to work to support federal legislation to help your Native American constituents in ${state} and across the entire country. BBy supporting such a bill, taxpayers' funds will no longer be used to propagate harmful and dehumanizing imagery of Indigenous people—a vital step in reckoning with our nation’s past. As it stands, ${state} has ${bad_mascots} native mascots, meaning that out of our ~${num_schools} public secondary schools, around 1 in ${bad_ones} continue to make a mockery out of Indigenous people. Please join the movement of declaring that our Native children are People, not Mascots by supporting any federal legislation surrounding this issue.
+To do so, I am asking you to use your position as a United States Senator to work to support federal legislation to help your Native American constituents in ${state} and across the entire country. By supporting such a bill, taxpayers' funds will no longer be used to propagate harmful and dehumanizing imagery of Indigenous people—a vital step in reckoning with our nation’s past. As it stands, ${state} has ${bad_mascots} native mascots, meaning that out of our ~${num_schools} public secondary schools, around 1 in ${bad_ones} continue to make a mockery out of Indigenous people. Please join the movement of declaring that our Native children are People, not Mascots by supporting any federal legislation surrounding this issue.
 \n
 Sincerely,
 \n${name}
 `
     $(".generated").show()
     $("#letter").text(`${letter}`)
+    alert("letter successfully generated!")
   }
 })
 

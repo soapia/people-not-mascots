@@ -208,6 +208,9 @@ button {
 
 #letter {
     color: black !important;
+    border-radius: 25px;
+    border-color: black;
+    border: 1px;
 }
 
 .card-header {
