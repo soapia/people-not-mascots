@@ -5339,12 +5339,14 @@ function copyTexts(prompt) {
 
 }
 
+var petition_num = 0
+
 ////// SUPER BOWL /////////
 $("#start-challenge").click(function() {
   $("#next-petition").show();
   $(".progress").show()
-  if ($('select').val() >= 1) {
-    petition_num = $('select').val() - 1
+  if ($('#schools-select').val() >= 1) {
+    petition_num = $('#schools-select').val() - 1
     var startSchool = petition_data[petition_num]
     $("#next-petition .card-title").text(startSchool["schoolname"]);
     $("#next-petition .card-text").text(`${startSchool["city"]}, ${startSchool["state"]}`)
@@ -5354,7 +5356,7 @@ $("#start-challenge").click(function() {
   }
 })
 
-var petition_num = 0
+
 
 $("#next-petition a").click(function() {
   setTimeout(function() {
