@@ -3,12 +3,18 @@
 //   $('#info-box').html($(this).data('info'));
 // });
 
+var houseSponsors = ['Brandy Fluker Oakley', 'Lindsay N. Sabadosa', 'Bud L. Williams', 'Jack Patrick Lewis', 'Samantha Montaño', 'Steven Owens', 'Russell E. Holmes', 'David Henry Argosky LeBoeuf', 'Tram T. Nguyen', 'Vanna Howard', 'Sally P. Kerans', 'Patricia A. Duffy', 'Tackey Chan', 'Erika Uyterhoeven', 'David M. Rogers', 'Ruth B. Balser', 'Rebecca L. Rausch', 'Adrian C. Madaro', 'Jon Santiago', "James J. O'Day", 'Michelle M. DuBois', 'Carmine Lawrence Gentile', 'James B. Eldridge', 'James C. Arena-DeRosa', 'Natalie M. Blais', 'Natalie M. Higgins', 'David Paul Linsky', 'Mindy Domb', 'Kate Lipper-Garabedian', 'Christine P. Barber', 'Manny Cruz', 'Daniel R. Carey', 'Michael P. Kushmerek', 'Thomas M. Stanley', 'Tommy Vitolo', 'Kay Khan']
+  var senSponsors = ['Joanne M. Comerford', 'Jack Patrick Lewis', 'Patricia D. Jehlen', 'Michael J. Barrett', 'Vanna Howard', 'Jason M. Lewis', 'John F. Keenan', 'Manny Cruz', 'Rebecca L. Rausch', 'James B. Eldridge', 'Sal N. DiDomenico', 'Thomas M. Stanley']
+  var committee = ['Jason M. Lewis', 'Sal N. DiDomenico', 'Patricia D. Jehlen', 'Robyn K. Kennedy', 'Rebecca L. Rausch', "Patrick M. O'Connor", 'Denise C. Garlick', 'Steven Ultrino', 'Vanna Howard', 'Smitty Pignatelli', 'Kate Donaghue', 'Andres X. Vargas', 'Danillo A. Sena', 'Christopher J. Worrell', 'Joseph W. McGonagle, Jr.', 'Kimberly N. Ferguson', 'Kelly W. Pease']
+  var committeeEmails = ['Jason.Lewis@masenate.gov', 'Sal.DiDomenico@masenate.gov', 'Patricia.Jehlen@masenate.gov', 'Robyn.Kennedy@masenate.gov', 'Rebecca.Rausch@masenate.gov', "Patrick.OConnor@masenate.gov", 'Denise.Garlick@mahouse.gov', 'Steven.Ultrino@mahouse.gov', 'Vanna.Howard@mahouse.gov', 'Smitty.Pignatelli@mahouse.gov', 'Kate.Donaghue@mahouse.gov', 'Andres.Vargas@mahouse.gov', 'Danillo.Sena@mahouse.gov', 'Christopher.Worrell@mahouse.gov', 'Joseph.McGonagle@mahouse.gov', 'Kimberly.Ferguson@mahouse.gov', 'Kelly.Pease@mahouse.gov']
+
 $(document).ready(function() {
   $("#in-state").hide()
   $(".letter-card").hide()
   $("#next-petition").hide()
   $(".progress").hide()
   $(".generated").hide()
+  $('.to-send').hide()
   getPetitions()
   addSelects()
 })
@@ -5312,6 +5318,75 @@ Sincerely,
     alert("letter successfully generated!")
   }
 })
+$(".not-res").click(function() {
+  event.preventDefault()
+  if ($('.ur-name').val() == "") {
+    alert("please input your name before submitting!")
+  } else {
+    var the_name = $('.ur-name').val()
+    the_name = the_name.replace(" ", "%20")
+    $('.send-links').empty()
+    $('.send-links').append(`<a class="button btn" href="${makeHREF(2, the_name, committeeEmails)}" style="background-color: #BCD979; color: black">Urge the Education Committee to Schedule a Hearing</a>`)
+    $('.to-send').show()
+  }
+})
+$(".get-reps").click(function() {
+  event.preventDefault()
+  var geocodelink = 'https://geocode.maps.co/search?q='
+  var openstates = 'https://v3.openstates.org/people.geo?'
+  var oskey = '&apikey=0e5bd40b-f92c-4fd9-8d1d-ae7dd1f9edbc'
+  if ($('#home-address').val() == "" || $('.ur-name').val() == "") {
+    alert("please input your address and name before submitting!")
+  } else {
+    var addy = $('#home-address').val()
+    addy = addy.replace(" ", "+")
+    var the_name = $('.ur-name').val()
+    var lat = ''
+    var lon = ''
+    var house = []
+    var sen = []
+    $.getJSON(geocodelink + addy, function(json) {
+      lat = json[0].lat
+      lon = json[0].lon
+      if ((41.251574 < lat && lat < 42.953720) || (-69.786275 > lon && lon > -73.547436)) {
+        $.getJSON(openstates + 'lat=' + lat + '&lng=' + lon + oskey, function(json) {
+              var eduEmail = false
+              res = json.results
+              try {
+                house = [res[1].name, res[1].email]
+                sen = [res[2].name, res[2].email]
+              } catch {
+                alert('please enter a valid address!')
+              }
+              $('.send-links').empty()
+              if (houseSponsors.includes(house[0])) {
+                console.log(house[0] + 'house sponsor!')
+                eduEmail = true
+              } else {
+                console.log(house[0] + 'not a house sponsor :(')
+                $('.send-links').append(`<a class="button btn" href="${makeHREF(1, the_name, house)}" style="background-color: #BCD979; color: black">Tell ${house[0]} to cosponsor H.477</a>`)
+              }
+              if (senSponsors.includes(sen[0])) {
+                console.log(sen[0] + 'sen sponsor!')
+                eduEmail = true
+              } else {
+                console.log(sen[0] + 'not a sen sponsor :(')
+                $('.send-links').append(`<a class="button btn" href="${makeHREF(1, the_name, sen)}" style="background-color: #BCD979; color: black">Tell ${sen[0]} to cosponsor S.245</a>`)
+              }
+              if (eduEmail) {
+                $('.send-links').append(`<a class="button btn" href="${makeHREF(2, the_name, committeeEmails)}" style="background-color: #BCD979; color: black">Urge the Education Committee to Schedule a Hearing</a>`)
+              }
+          })
+        } else {
+          alert('please enter a massachusetts address!')
+        }
+        $('.to-send').show()
+      })
+      
+  }
+  
+})
+
 
 function copyTexts(prompt) {
   //  /* Get the text field */
@@ -5376,4 +5451,37 @@ function updateProgress() {
   $(".progress-bar").attr("style", `width: ${currentPercent}%`)
   $(".progress-bar").attr("aria-valuenow", currentPercent)
   $(".progress-bar").text(`${currentPercent}%`)
+}
+
+
+function makeHREF(template, name, recipients) {
+  var emails = ''
+  var person = ''
+  var email = ''
+  var href = ''
+  var bill = ''
+  var subject = ''
+  if (recipients.length <= 2) {
+    person = recipients[0]
+    emails = recipients[1]
+    console.log(emails)
+    if (emails.includes('senate')) {
+      bill = 'S.245'
+    } else {
+      bill = 'H.477'
+    }
+  } else {
+    emails = recipients.join(",")
+    person = 'Members of the Joint Education Committee'
+  }
+  if (template == 1) {
+    subject = `Co-Sponsor Native Mascot Removal Legislation (${bill})`
+    email = `Dear ${person},\n\nI am ${name}, and I am writing to you today to protect Native cultures and create equal learning environments for Native students. Other states such as Maine, Colorado, Washington, Nevada, and New York have recognized that these mascots are detrimental to the public education system. They understand that the American Psychological Association has proved that these offensive caricatures expose Native children to racist stereotypes causing them to distance themselves from their culture, lower self-esteem, and have since retired them. Native people are fighting for their cultures, and due to the United States previous attacks on Native peoples and cultures, it is now our collective responsibility to right these wrongs.\n\nTo do so, I am asking you to use your position as a state representative to support Massachusetts legislation to help your Native American constituents. By supporting such a bill, taxpayers' funds will no longer be used to propagate harmful and dehumanizing imagery of Indigenous people—a vital step in reckoning with our Massachusetts's past. As it stands, Massachusetts has 24 public school districts with native mascots, meaning that out of our ~520 public school districts, around 1 in 24 continue to make a mockery out of Indigenous people. Please join the movement of declaring that our Native children are People, not Mascots, and co-sponsoring ${bill}.\n\nSincerely,\n${name}`
+  } else {
+    subject = "Schedule a Hearing for Native Mascot Legislation (H.477 and S.245)"
+    email = `Dear ${person},\n\nI am ${name}, and I am asking you today to prioritize Native cultures and help create equal learning environments for Native students. A great bill has been referred to the committee you are a part of—H.477 and S.245—and with your advocacy, we can make sure this bill has a hearing as soon as possible and can get signed into law. I appreciate all of the other important work you are attending to, but we must ensure that Native children’s well-being does not get swept under the rug this legislative session. The last action for this bill was in February, it is now May, and we need action as soon as possible.\n\nThank you for supporting Native children.\n\nSincerely,\n${name}`
+  }
+  var emailURI = encodeURIComponent(email)
+    href=`mailto:${emails}?subject=${encodeURIComponent(subject)}&body=${emailURI}`
+  return href
 }
