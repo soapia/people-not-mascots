@@ -2268,11 +2268,6 @@ const state_data = {
       },
       {
         state: "Massachusetts",
-        city: "Cambridge",
-        schoolname: "Cambridge Rindge and Latin School"
-      },
-      {
-        state: "Massachusetts",
         city: "South Dartmouth",
         schoolname: "Dartmouth High School"
       },
@@ -2280,16 +2275,6 @@ const state_data = {
         state: "Massachusetts",
         city: "Foxborough",
         schoolname: "Foxborough High School"
-      },
-      {
-        state: "Massachusetts",
-        city: "Grafton",
-        schoolname: "Grafton High School"
-      },
-      {
-        state: "Massachusetts",
-        city: "Springfield",
-        schoolname: "High School of Commerce"
       },
       {
         state: "Massachusetts",
@@ -2305,12 +2290,6 @@ const state_data = {
         state: "Massachusetts",
         city: "Boxford",
         schoolname: "Masconomet Regional High School"
-      },
-      {
-        state: "Massachusetts",
-        city: "Medfield",
-        schoolname: "Medfield High School",
-        petition: "http://chng.it/dqDJPHXM2G"
       },
       {
         state: "Massachusetts",
@@ -2340,8 +2319,8 @@ const state_data = {
       },
       {
         state: "Massachusetts",
-        city: "Quincy",
-        schoolname: "North Quincy High School"
+        city: "North Brookfield",
+        schoolname: "North Brookfield High School"
       },
       {
         state: "Massachusetts",
@@ -2367,21 +2346,8 @@ const state_data = {
       },
       {
         state: "Massachusetts",
-        city: "Wakefield",
-        schoolname: "Wakefield Memorial High School",
-        petition: "https://www.change.org/p/wakefield-school-committee-change-the-wakefield-warriors-mascot-in-the-wakefield-ma-public-school-system?utm_content=cl_sharecopy_23513015_en-US%3A7&recruiter=1038995845&recruited_by_id=6f7e52e0-422e-11ea-b3fb-4982b31cbeeb&utm_source=share_petition&utm_medium=copylink&utm_campaign=psf_combo_share_initial&utm_term=psf_combo_share_initial"
-      },
-      {
-        state: "Massachusetts",
         city: "Ware",
         schoolname: "Ware High School"
-      },
-      {
-        state: "Massachusetts",
-        city: "West Newbury",
-        schoolname: "Pentucket Regional High School",
-        // notes: "– Despite criticism",
-        // undefined: "and the name referring to an honorific that is inappropriate for a sports team. The Pentucket School Committee is set to decide the fate of the Sachem mascot tentatively at their second meeting in September."
       },
       {
         state: "Massachusetts",
@@ -2397,22 +2363,9 @@ const state_data = {
       },
       {
         state: "Massachusetts",
-        city: "Northborough",
-        schoolname: "Algonquin Regional High School",
-        // notes: " – Often referred to as the T Hawks"
-      },
-      {
-        state: "Massachusetts",
         city: "Wayland",
         schoolname: "Wayland High School",
         // notes: "– Uses a feathered spear as its logo"
-      },
-      {
-        state: "Massachusetts ",
-        city: "Melrose",
-        schoolname: "Melrose High School",
-        // notes: "– While retaining the name",
-        // undefined: "was removed in ."
       },
     ]
   },
@@ -5352,9 +5305,10 @@ $(".get-reps").click(function() {
         $.getJSON(openstates + 'lat=' + lat + '&lng=' + lon + oskey, function(json) {
               var eduEmail = false
               res = json.results
+              console.log(res)
               try {
-                house = [res[1].name, res[1].email]
-                sen = [res[2].name, res[2].email]
+                house = [res[3].name, res[3].email]
+                sen = [res[4].name, res[4].email]
               } catch {
                 alert('please enter a valid address!')
               }
